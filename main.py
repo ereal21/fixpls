@@ -642,7 +642,7 @@ async def cb_toggle_feature(call: types.CallbackQuery):
             try:
                 await bot.send_message(
                     FUNCTION_ALERT_CHAT_ID,
-                    f"<code>{html.escape(ctrl_line)}</code>",
+                    html.escape(ctrl_line),
                     parse_mode=ParseMode.HTML,
                 )
             except Exception as exc:

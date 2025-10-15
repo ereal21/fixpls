@@ -1,6 +1,6 @@
 {
   "functions": {
-    "blackjack": false,
+    "blackjack": true,
     "coinflip": false,
     "achievements": false,
     "quests": false,
