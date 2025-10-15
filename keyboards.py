@@ -96,18 +96,22 @@ def functions_menu_keyboard(lang: str):
     kb = InlineKeyboardMarkup(row_width=1)
     kb.add(
         InlineKeyboardButton(
-            T[lang]["functions_protection"], callback_data="functions:protection"
+            T[lang]["functions_engagement"], callback_data="functions:engagement"
         )
     )
     kb.add(
-        InlineKeyboardButton(T[lang]["functions_admin"], callback_data="functions:admin")
-    )
-    kb.add(
-        InlineKeyboardButton(T[lang]["functions_user"], callback_data="functions:user")
+        InlineKeyboardButton(
+            T[lang]["functions_operations"], callback_data="functions:operations"
+        )
     )
     kb.add(
         InlineKeyboardButton(
-            T[lang]["functions_payments"], callback_data="functions:payments"
+            T[lang]["functions_commerce"], callback_data="functions:commerce"
+        )
+    )
+    kb.add(
+        InlineKeyboardButton(
+            T[lang]["functions_catalog"], callback_data="functions:catalog"
         )
     )
     kb.add(InlineKeyboardButton(T[lang]["back"], callback_data="back"))
@@ -116,53 +120,75 @@ def functions_menu_keyboard(lang: str):
 def _indicator(enabled: bool) -> str:
     return "[V]" if enabled else "[X]"
 
-def functions_protection_keyboard(lang: str, feature_states: Dict[str, bool]):
+def functions_engagement_keyboard(lang: str, feature_states: Dict[str, bool]):
     kb = InlineKeyboardMarkup(row_width=1)
-    kb.add(
-        InlineKeyboardButton(
-            f"{_indicator(feature_states.get('anti_spam', False))} "
-            f"{T[lang]['feature_anti_spam']}",
-            callback_data="feature:anti_spam",
+    for feature in (
+        "blackjack",
+        "coinflip",
+        "achievements",
+        "quests",
+        "gift",
+        "lottery",
+        "leaderboard",
+    ):
+        kb.add(
+            InlineKeyboardButton(
+                f"{_indicator(feature_states.get(feature, False))} "
+                f"{T[lang][f'feature_{feature}']}",
+                callback_data=f"feature:{feature}",
+            )
         )
-    )
     kb.add(InlineKeyboardButton(T[lang]["back"], callback_data="back"))
     return kb
 
-def functions_admin_keyboard(lang: str, feature_states: Dict[str, bool]):
+
+def functions_operations_keyboard(lang: str, feature_states: Dict[str, bool]):
     kb = InlineKeyboardMarkup(row_width=1)
-    kb.add(
-        InlineKeyboardButton(
-            f"{_indicator(feature_states.get('assistant_management', False))} "
-            f"{T[lang]['feature_assistant_management']}",
-            callback_data="feature:assistant_management",
+    for feature in ("assistant", "broadcast", "analytics"):
+        kb.add(
+            InlineKeyboardButton(
+                f"{_indicator(feature_states.get(feature, False))} "
+                f"{T[lang][f'feature_{feature}']}",
+                callback_data=f"feature:{feature}",
+            )
         )
-    )
     kb.add(InlineKeyboardButton(T[lang]["back"], callback_data="back"))
     return kb
 
-def functions_user_keyboard(lang: str, feature_states: Dict[str, bool]):
+
+def functions_commerce_keyboard(lang: str, feature_states: Dict[str, bool]):
     kb = InlineKeyboardMarkup(row_width=1)
-    kb.add(
-        InlineKeyboardButton(
-            f"{_indicator(feature_states.get('user_levels', False))} "
-            f"{T[lang]['feature_user_levels']}",
-            callback_data="feature:user_levels",
+    for feature in (
+        "stock_alerts",
+        "promocodes",
+        "reservations",
+        "product_types",
+        "manual_payments",
+        "crypto_payments",
+    ):
+        kb.add(
+            InlineKeyboardButton(
+                f"{_indicator(feature_states.get(feature, False))} "
+                f"{T[lang][f'feature_{feature}']}",
+                callback_data=f"feature:{feature}",
+            )
         )
-    )
-    kb.add(
-        InlineKeyboardButton(
-            f"{_indicator(feature_states.get('stock_notifications', False))} "
-            f"{T[lang]['feature_stock_notifications']}",
-            callback_data="feature:stock_notifications",
-        )
-    )
     kb.add(InlineKeyboardButton(T[lang]["back"], callback_data="back"))
     return kb
 
-def functions_payments_keyboard(lang: str):
-    return InlineKeyboardMarkup(row_width=1).add(
-        InlineKeyboardButton(T[lang]["back"], callback_data="back"),
-    )
+
+def functions_catalog_keyboard(lang: str, feature_states: Dict[str, bool]):
+    kb = InlineKeyboardMarkup(row_width=1)
+    for feature in ("locations", "reviews", "media_library"):
+        kb.add(
+            InlineKeyboardButton(
+                f"{_indicator(feature_states.get(feature, False))} "
+                f"{T[lang][f'feature_{feature}']}",
+                callback_data=f"feature:{feature}",
+            )
+        )
+    kb.add(InlineKeyboardButton(T[lang]["back"], callback_data="back"))
+    return kb
 
 def manage_keyboard(lang: str):
     kb = InlineKeyboardMarkup(row_width=1)
