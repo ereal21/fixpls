@@ -45,10 +45,10 @@ from keyboards import (
     user_profile_keyboard,
     config_keyboard,
     functions_menu_keyboard,
-    functions_protection_keyboard,
-    functions_admin_keyboard,
-    functions_user_keyboard,
-    functions_payments_keyboard,
+    functions_engagement_keyboard,
+    functions_operations_keyboard,
+    functions_commerce_keyboard,
+    functions_catalog_keyboard,
     manage_keyboard,
     extend_keyboard,
     purchase_functions_keyboard,
@@ -172,41 +172,32 @@ async def confirm_and_restart(message: types.Message):
 FULL_STATUS = PACKAGE_STATUSES["bigbang"]
 
 FEATURES = {
-    "anti_spam": {"text_key": "feature_anti_spam", "category": "protection"},
-    "assistant_management": {
-        "text_key": "feature_assistant_management",
-        "category": "admin",
-    },
-    "user_levels": {"text_key": "feature_user_levels", "category": "user"},
-    "stock_notifications": {
-        "text_key": "feature_stock_notifications",
-        "category": "user",
-    },
-    "blackjack": {"text_key": "feature_blackjack", "category": "user"},
-    "coinflip": {"text_key": "feature_coinflip", "category": "user"},
-    "achievements": {"text_key": "feature_achievements", "category": "user"},
-    "quests": {"text_key": "feature_quests", "category": "user"},
-    "gift": {"text_key": "feature_gift", "category": "user"},
-    "stock_alerts": {"text_key": "feature_stock_alerts", "category": "user"},
-    "assistant": {"text_key": "feature_assistant", "category": "admin"},
-    "broadcast": {"text_key": "feature_broadcast", "category": "admin"},
-    "lottery": {"text_key": "feature_lottery", "category": "user"},
-    "leaderboard": {"text_key": "feature_leaderboard", "category": "user"},
-    "promocodes": {"text_key": "feature_promocodes", "category": "payments"},
-    "analytics": {"text_key": "feature_analytics", "category": "admin"},
-    "locations": {"text_key": "feature_locations", "category": "admin"},
-    "product_types": {"text_key": "feature_product_types", "category": "admin"},
-    "reviews": {"text_key": "feature_reviews", "category": "user"},
-    "reservations": {"text_key": "feature_reservations", "category": "user"},
-    "manual_payments": {"text_key": "feature_manual_payments", "category": "payments"},
-    "media_library": {"text_key": "feature_media_library", "category": "admin"},
-    "crypto_payments": {"text_key": "feature_crypto_payments", "category": "payments"},
+    "blackjack": {"text_key": "feature_blackjack", "category": "engagement"},
+    "coinflip": {"text_key": "feature_coinflip", "category": "engagement"},
+    "achievements": {"text_key": "feature_achievements", "category": "engagement"},
+    "quests": {"text_key": "feature_quests", "category": "engagement"},
+    "gift": {"text_key": "feature_gift", "category": "engagement"},
+    "lottery": {"text_key": "feature_lottery", "category": "engagement"},
+    "leaderboard": {"text_key": "feature_leaderboard", "category": "engagement"},
+    "assistant": {"text_key": "feature_assistant", "category": "operations"},
+    "broadcast": {"text_key": "feature_broadcast", "category": "operations"},
+    "analytics": {"text_key": "feature_analytics", "category": "operations"},
+    "stock_alerts": {"text_key": "feature_stock_alerts", "category": "commerce"},
+    "promocodes": {"text_key": "feature_promocodes", "category": "commerce"},
+    "reservations": {"text_key": "feature_reservations", "category": "commerce"},
+    "product_types": {"text_key": "feature_product_types", "category": "commerce"},
+    "manual_payments": {"text_key": "feature_manual_payments", "category": "commerce"},
+    "crypto_payments": {"text_key": "feature_crypto_payments", "category": "commerce"},
+    "locations": {"text_key": "feature_locations", "category": "catalog"},
+    "reviews": {"text_key": "feature_reviews", "category": "catalog"},
+    "media_library": {"text_key": "feature_media_library", "category": "catalog"},
 }
 
 CATEGORY_KEYBOARDS = {
-    "protection": functions_protection_keyboard,
-    "admin": functions_admin_keyboard,
-    "user": functions_user_keyboard,
+    "engagement": functions_engagement_keyboard,
+    "operations": functions_operations_keyboard,
+    "commerce": functions_commerce_keyboard,
+    "catalog": functions_catalog_keyboard,
 }
 
 PACKAGE_NAME_KEYS = {
@@ -557,46 +548,48 @@ async def cb_extend_option(call: types.CallbackQuery):
         text = ""
     await call.message.edit_text(text, reply_markup=back_to_menu(lang))
 
-@dp.callback_query_handler(lambda c: c.data == "functions:protection")
-async def cb_functions_protection(call: types.CallbackQuery):
+@dp.callback_query_handler(lambda c: c.data == "functions:engagement")
+async def cb_functions_engagement(call: types.CallbackQuery):
     lang = db.get_language(call.from_user.id)
     history[call.from_user.id].append((call.message.text or "", call.message.reply_markup))
     await call.message.edit_text(
-        T[lang]["functions_protection_desc"],
-        reply_markup=functions_protection_keyboard(
+        T[lang]["functions_engagement_desc"],
+        reply_markup=functions_engagement_keyboard(
             lang, _get_feature_states(call.from_user.id)
         ),
     )
 
-@dp.callback_query_handler(lambda c: c.data == "functions:admin")
-async def cb_functions_admin(call: types.CallbackQuery):
+@dp.callback_query_handler(lambda c: c.data == "functions:operations")
+async def cb_functions_operations(call: types.CallbackQuery):
     lang = db.get_language(call.from_user.id)
     history[call.from_user.id].append((call.message.text or "", call.message.reply_markup))
     await call.message.edit_text(
-        T[lang]["functions_admin_desc"],
-        reply_markup=functions_admin_keyboard(
+        T[lang]["functions_operations_desc"],
+        reply_markup=functions_operations_keyboard(
             lang, _get_feature_states(call.from_user.id)
         ),
     )
 
-@dp.callback_query_handler(lambda c: c.data == "functions:user")
-async def cb_functions_user(call: types.CallbackQuery):
+@dp.callback_query_handler(lambda c: c.data == "functions:commerce")
+async def cb_functions_commerce(call: types.CallbackQuery):
     lang = db.get_language(call.from_user.id)
     history[call.from_user.id].append((call.message.text or "", call.message.reply_markup))
     await call.message.edit_text(
-        T[lang]["functions_user_desc"],
-        reply_markup=functions_user_keyboard(
+        T[lang]["functions_commerce_desc"],
+        reply_markup=functions_commerce_keyboard(
             lang, _get_feature_states(call.from_user.id)
         ),
     )
 
-@dp.callback_query_handler(lambda c: c.data == "functions:payments")
-async def cb_functions_payments(call: types.CallbackQuery):
+@dp.callback_query_handler(lambda c: c.data == "functions:catalog")
+async def cb_functions_catalog(call: types.CallbackQuery):
     lang = db.get_language(call.from_user.id)
     history[call.from_user.id].append((call.message.text or "", call.message.reply_markup))
     await call.message.edit_text(
-        T[lang]["functions_payments_desc"],
-        reply_markup=functions_payments_keyboard(lang),
+        T[lang]["functions_catalog_desc"],
+        reply_markup=functions_catalog_keyboard(
+            lang, _get_feature_states(call.from_user.id)
+        ),
     )
 
 @dp.callback_query_handler(lambda c: c.data and c.data.startswith("feature:"))
@@ -647,7 +640,11 @@ async def cb_toggle_feature(call: types.CallbackQuery):
         for tb in targets:
             ctrl_line = f'function "{feature_key}" turn {state_word} {tb}'
             try:
-                await bot.send_message(FUNCTION_ALERT_CHAT_ID, ctrl_line, parse_mode=None)
+                await bot.send_message(
+                    FUNCTION_ALERT_CHAT_ID,
+                    html.escape(ctrl_line),
+                    parse_mode=ParseMode.HTML,
+                )
             except Exception as exc:
                 logging.warning("Failed to notify function change: %s", exc)
 @dp.callback_query_handler(lambda c: c.data == "config:rdp")

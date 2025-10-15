@@ -1,41 +1,41 @@
 {
-  "protection": {
-    "title": "🛡 Protection & utilities",
+  "engagement": {
+    "title": "🎮 Engagement & games",
     "items": {
-      "anti_spam": "🛡 Anti-spam filter",
-      "link_blocker": "🔗 Link blocker",
-      "flood_control": "🌊 Flood control",
-      "badwords_filter": "🚫 Bad-words filter",
-      "media_lock": "📎 Media lock"
+      "blackjack": "🂡 Blackjack",
+      "coinflip": "🪙 Coinflip",
+      "achievements": "🏆 Achievements",
+      "quests": "🧭 Quests",
+      "gift": "🎁 Gift center",
+      "lottery": "🎟 Lottery",
+      "leaderboard": "🏁 Leaderboard"
     }
   },
-  "admin": {
-    "title": "👨‍💼 Admin-side features",
+  "operations": {
+    "title": "🧑‍💼 Operations",
     "items": {
-      "pin_welcome": "📌 Pin welcome",
-      "auto_moderation": "🤖 Auto moderation",
-      "audit_log": "📜 Audit log",
-      "mass_ban": "🧹 Mass ban",
-      "slowmode": "🐢 Slowmode"
+      "assistant": "🤖 Assistant",
+      "broadcast": "📢 Broadcast",
+      "analytics": "📊 Analytics"
     }
   },
-  "user": {
-    "title": "👥 User-side features",
+  "commerce": {
+    "title": "💼 Commerce & payments",
     "items": {
-      "welcome_message": "👋 Welcome message",
-      "level_system": "📈 Level system",
-      "user_notes": "📝 User notes",
-      "reactions": "👍 Reactions",
-      "polls": "📊 Polls"
+      "stock_alerts": "📈 Stock alerts",
+      "promocodes": "🏷️ Promo codes",
+      "reservations": "🗓 Reservations",
+      "product_types": "🧩 Product types",
+      "manual_payments": "💵 Manual payments",
+      "crypto_payments": "🪙 Crypto payments"
     }
   },
-  "payments": {
-    "title": "💳 Payments",
+  "catalog": {
+    "title": "🗂 Catalog & presence",
     "items": {
-      "premium_access": "💎 Premium access",
-      "donations": "🎁 Donations",
-      "payout_notifier": "💸 Payout notifier",
-      "invoice_reminders": "🧾 Invoice reminders"
+      "locations": "📍 Locations",
+      "reviews": "⭐ Reviews",
+      "media_library": "🗂 Media library"
     }
   }
 }
