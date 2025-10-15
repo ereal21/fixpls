@@ -181,37 +181,33 @@ T: Dict[str, Dict[str, str]] = {
         "package_name_hypernova": "Hypernova",
         "package_name_bigbang": "Big Bang",
         "functions_title": "🧩 *Choose a function category:*",
-        "functions_protection": "🛡 Protection & utilities",
-        "functions_admin": "🧑‍💼 Admin-side features",
-        "functions_user": "👥 User-side features",
-        "functions_payments": "💳 Payments",
-        "functions_protection_desc": "🛡 *Protection & utilities*\nPick a tool below to see what it covers.",
-        "functions_admin_desc": "🧑‍💼 *Admin-side features*\nTap an option to learn how it helps you run the shop.",
-        "functions_user_desc": "👥 *User-side features*\nChoose a feature to see the customer experience upgrades.",
-        "functions_payments_desc": (
-            "💳 *Payments*\n"
-            "Accept secure crypto payments via NOWPayments with automatic confirmations for SOL, USDT-TRC20, and XMR."
-        ),
-        "feature_anti_spam": "🛡 Anti-spam filter",
-        "feature_anti_spam_desc": (
-            "🛡 *Anti-spam filter*\n"
-            "Automatically blocks suspicious sign-ups, repeated requests, and flood attempts to keep your bot clean."
-        ),
-        "feature_assistant_management": "🤝 Assistant management",
-        "feature_assistant_management_desc": (
-            "🤝 *Assistant management*\n"
-            "Add or remove assistant accounts, assign roles, and delegate daily operations without sharing your main credentials."
-        ),
-        "feature_user_levels": "🎚 User levels",
-        "feature_user_levels_desc": (
-            "🎚 *User levels*\n"
-            "Segment shoppers into tiers, unlock special pricing or rewards, and track loyalty progress automatically."
-        ),
-        "feature_stock_notifications": "🔔 Stock notifications",
-        "feature_stock_notifications_desc": (
-            "🔔 *Stock notifications*\n"
-            "Alert users when items are back in stock or running low so they never miss a drop."
-        ),
+        "functions_engagement": "🎮 Engagement & games",
+        "functions_operations": "🧑‍💼 Operations",
+        "functions_commerce": "💼 Commerce & payments",
+        "functions_catalog": "🗂 Catalog & presence",
+        "functions_engagement_desc": "🎮 *Engagement & games*\nTurn on interactive experiences to boost retention.",
+        "functions_operations_desc": "🧑‍💼 *Operations*\nAutomate your team's workflows and messaging.",
+        "functions_commerce_desc": "💼 *Commerce & payments*\nManage sales flows, alerts, and payment handling.",
+        "functions_catalog_desc": "🗂 *Catalog & presence*\nKeep listings, media, and locations organised.",
+        "feature_blackjack": "🂡 Blackjack",
+        "feature_coinflip": "🪙 Coinflip",
+        "feature_achievements": "🏆 Achievements",
+        "feature_quests": "🧭 Quests",
+        "feature_gift": "🎁 Gift",
+        "feature_lottery": "🎟 Lottery",
+        "feature_leaderboard": "🏁 Leaderboard",
+        "feature_assistant": "🤖 Assistant",
+        "feature_broadcast": "📢 Broadcast",
+        "feature_analytics": "📊 Analytics",
+        "feature_stock_alerts": "📈 Stock alerts",
+        "feature_promocodes": "🏷️ Promo codes",
+        "feature_reservations": "🗓 Reservations",
+        "feature_product_types": "🧩 Product types",
+        "feature_manual_payments": "💵 Manual payments",
+        "feature_crypto_payments": "🪙 Crypto payments",
+        "feature_locations": "📍 Locations",
+        "feature_reviews": "⭐ Reviews",
+        "feature_media_library": "🗂 Media library",
         "feature_enabled": "✅ \"{feature}\" turned ON.",
         "feature_disabled": "❌ \"{feature}\" turned OFF.",
         "coming_soon": "🚧 *This feature is disabled for now.*",
@@ -501,43 +497,33 @@ T: Dict[str, Dict[str, str]] = {
         "package_name_hypernova": "Hypernova",
         "package_name_bigbang": "Big Bang",
         "functions_title": "🧩 *Выберите категорию функций:*",
-        "functions_protection": "🛡 Защита и утилиты",
-        "functions_admin": "🧑‍💼 Функции для админа",
-        "functions_user": "👥 Функции для пользователей",
-        "functions_payments": "💳 Платежи",
-        "functions_protection_desc": "🛡 *Защита и утилиты*\nВыберите инструмент ниже, чтобы узнать подробности.",
-        "functions_admin_desc": (
-            "🧑‍💼 *Функции для админа*\n"
-            "Нажмите на пункт, чтобы узнать, как он помогает управлять магазином."
-        ),
-        "functions_user_desc": (
-            "👥 *Функции для пользователей*\n"
-            "Выберите функцию, чтобы увидеть улучшения для клиентов."
-        ),
-        "functions_payments_desc": (
-            "💳 *Платежи*\n"
-            "Принимайте безопасные криптоплатежи через NOWPayments с авто-подтверждением для SOL, USDT-TRC20 и XMR."
-        ),
-        "feature_anti_spam": "🛡 Антиспам-фильтр",
-        "feature_anti_spam_desc": (
-            "🛡 *Антиспам-фильтр*\n"
-            "Автоматически блокирует подозрительные регистрации, повторные запросы и флуд, чтобы бот оставался чистым."
-        ),
-        "feature_assistant_management": "🤝 Управление ассистентами",
-        "feature_assistant_management_desc": (
-            "🤝 *Управление ассистентами*\n"
-            "Добавляйте или удаляйте аккаунты помощников, назначайте роли и делегируйте задачи без передачи основных данных."
-        ),
-        "feature_user_levels": "🎚 Уровни пользователей",
-        "feature_user_levels_desc": (
-            "🎚 *Уровни пользователей*\n"
-            "Разделяйте покупателей на уровни, открывайте специальные цены и автоматически отслеживайте лояльность."
-        ),
-        "feature_stock_notifications": "🔔 Уведомления о наличии",
-        "feature_stock_notifications_desc": (
-            "🔔 *Уведомления о наличии*\n"
-            "Сообщайте пользователям, когда товары появляются снова или заканчиваются, чтобы они не пропускали новинки."
-        ),
+        "functions_engagement": "🎮 Игры и вовлечение",
+        "functions_operations": "🧑‍💼 Операции",
+        "functions_commerce": "💼 Коммерция и платежи",
+        "functions_catalog": "🗂 Каталог и присутствие",
+        "functions_engagement_desc": "🎮 *Игры и вовлечение*\nВключайте интерактивы, чтобы удерживать аудиторию.",
+        "functions_operations_desc": "🧑‍💼 *Операции*\nАвтоматизируйте работу команды и рассылки.",
+        "functions_commerce_desc": "💼 *Коммерция и платежи*\nУправляйте продажами, уведомлениями и приёмом оплат.",
+        "functions_catalog_desc": "🗂 *Каталог и присутствие*\nСледите за медиатекой, отзывами и адресами.",
+        "feature_blackjack": "🂡 Блэкджек",
+        "feature_coinflip": "🪙 Орёл или решка",
+        "feature_achievements": "🏆 Достижения",
+        "feature_quests": "🧭 Квесты",
+        "feature_gift": "🎁 Подарки",
+        "feature_lottery": "🎟 Лотерея",
+        "feature_leaderboard": "🏁 Таблица лидеров",
+        "feature_assistant": "🤖 Ассистент",
+        "feature_broadcast": "📢 Рассылка",
+        "feature_analytics": "📊 Аналитика",
+        "feature_stock_alerts": "📈 Оповещения о наличии",
+        "feature_promocodes": "🏷️ Промокоды",
+        "feature_reservations": "🗓 Бронирования",
+        "feature_product_types": "🧩 Типы товаров",
+        "feature_manual_payments": "💵 Ручные платежи",
+        "feature_crypto_payments": "🪙 Криптоплатежи",
+        "feature_locations": "📍 Локации",
+        "feature_reviews": "⭐ Отзывы",
+        "feature_media_library": "🗂 Медиа-библиотека",
         "feature_enabled": "✅ \"{feature}\" включена.",
         "feature_disabled": "❌ \"{feature}\" выключена.",
         "coming_soon": "🚧 *Эта функция отключена.*",
@@ -809,43 +795,33 @@ T: Dict[str, Dict[str, str]] = {
         "package_name_hypernova": "Hypernova",
         "package_name_bigbang": "Big Bang",
         "functions_title": "🧩 *Pasirinkite funkcijų kategoriją:*",
-        "functions_protection": "🛡 Apsauga ir įrankiai",
-        "functions_admin": "🧑‍💼 Administratoriaus funkcijos",
-        "functions_user": "👥 Vartotojo funkcijos",
-        "functions_payments": "💳 Mokėjimai",
-        "functions_protection_desc": "🛡 *Apsauga ir įrankiai*\nPasirinkite įrankį ir sužinokite daugiau.",
-        "functions_admin_desc": (
-            "🧑‍💼 *Administratoriaus funkcijos*\n"
-            "Bakstelėkite punktą ir sužinokite, kaip jis padeda valdyti parduotuvę."
-        ),
-        "functions_user_desc": (
-            "👥 *Vartotojo funkcijos*\n"
-            "Pasirinkite funkciją ir pažiūrėkite, kokią patirtį gauna klientai."
-        ),
-        "functions_payments_desc": (
-            "💳 *Mokėjimai*\n"
-            "Priimkite saugius kriptomokėjimus per NOWPayments su automatiniu SOL, USDT-TRC20 ir XMR patvirtinimu."
-        ),
-        "feature_anti_spam": "🛡 Anti-spamo filtras",
-        "feature_anti_spam_desc": (
-            "🛡 *Anti-spamo filtras*\n"
-            "Automatiškai blokuoja įtartinus prisijungimus, pasikartojančias užklausas ir flood'ą, kad bot'as liktų švarus."
-        ),
-        "feature_assistant_management": "🤝 Asistentų valdymas",
-        "feature_assistant_management_desc": (
-            "🤝 *Asistentų valdymas*\n"
-            "Pridėkite ar pašalinkite asistentų paskyras, priskirkite roles ir deleguokite darbus neatskleisdami pagrindinių prisijungimų."
-        ),
-        "feature_user_levels": "🎚 Vartotojų lygiai",
-        "feature_user_levels_desc": (
-            "🎚 *Vartotojų lygiai*\n"
-            "Skirstykite pirkėjus į lygius, suteikite specialias kainas ir automatiškai sekite lojalumą."
-        ),
-        "feature_stock_notifications": "🔔 Atsargų pranešimai",
-        "feature_stock_notifications_desc": (
-            "🔔 *Atsargų pranešimai*\n"
-            "Praneškite vartotojams, kai prekės grįžta į sandėlį arba baigiasi, kad jie nepraleistų pasiūlymų."
-        ),
+        "functions_engagement": "🎮 Įsitraukimas ir žaidimai",
+        "functions_operations": "🧑‍💼 Operacijos",
+        "functions_commerce": "💼 Komercija ir mokėjimai",
+        "functions_catalog": "🗂 Katalogas ir vitrina",
+        "functions_engagement_desc": "🎮 *Įsitraukimas ir žaidimai*\nĮjunkite interaktyvius žaidimus ir pramogas.",
+        "functions_operations_desc": "🧑‍💼 *Operacijos*\nAutomatizuokite komandos darbą ir pranešimus.",
+        "functions_commerce_desc": "💼 *Komercija ir mokėjimai*\nValdykite pardavimus, įspėjimus ir apmokėjimus.",
+        "functions_catalog_desc": "🗂 *Katalogas ir vitrina*\nTvarkykite vietas, atsiliepimus ir mediją.",
+        "feature_blackjack": "🂡 Blackjack",
+        "feature_coinflip": "🪙 Monetos metimas",
+        "feature_achievements": "🏆 Pasiekimai",
+        "feature_quests": "🧭 Užduotys",
+        "feature_gift": "🎁 Dovanų centras",
+        "feature_lottery": "🎟 Loterija",
+        "feature_leaderboard": "🏁 Lyderių lentelė",
+        "feature_assistant": "🤖 Asistentas",
+        "feature_broadcast": "📢 Transliacijos",
+        "feature_analytics": "📊 Analitika",
+        "feature_stock_alerts": "📈 Atsargų įspėjimai",
+        "feature_promocodes": "🏷️ Nuolaidų kodai",
+        "feature_reservations": "🗓 Rezervacijos",
+        "feature_product_types": "🧩 Produktų tipai",
+        "feature_manual_payments": "💵 Rankiniai mokėjimai",
+        "feature_crypto_payments": "🪙 Kriptomokėjimai",
+        "feature_locations": "📍 Lokacijos",
+        "feature_reviews": "⭐ Atsiliepimai",
+        "feature_media_library": "🗂 Mediateka",
         "feature_enabled": "✅ „{feature}“ įjungta.",
         "feature_disabled": "❌ „{feature}“ išjungta.",
         "coming_soon": "🚧 *Ši funkcija išjungta.*",
