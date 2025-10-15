@@ -1,0 +1,41 @@
+{
+  "protection": {
+    "title": "🛡 Protection & utilities",
+    "items": {
+      "anti_spam": "🛡 Anti-spam filter",
+      "link_blocker": "🔗 Link blocker",
+      "flood_control": "🌊 Flood control",
+      "badwords_filter": "🚫 Bad-words filter",
+      "media_lock": "📎 Media lock"
+    }
+  },
+  "admin": {
+    "title": "👨‍💼 Admin-side features",
+    "items": {
+      "pin_welcome": "📌 Pin welcome",
+      "auto_moderation": "🤖 Auto moderation",
+      "audit_log": "📜 Audit log",
+      "mass_ban": "🧹 Mass ban",
+      "slowmode": "🐢 Slowmode"
+    }
+  },
+  "user": {
+    "title": "👥 User-side features",
+    "items": {
+      "welcome_message": "👋 Welcome message",
+      "level_system": "📈 Level system",
+      "user_notes": "📝 User notes",
+      "reactions": "👍 Reactions",
+      "polls": "📊 Polls"
+    }
+  },
+  "payments": {
+    "title": "💳 Payments",
+    "items": {
+      "premium_access": "💎 Premium access",
+      "donations": "🎁 Donations",
+      "payout_notifier": "💸 Payout notifier",
+      "invoice_reminders": "🧾 Invoice reminders"
+    }
+  }
+}
